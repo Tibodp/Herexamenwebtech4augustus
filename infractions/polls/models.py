@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Movie(models.Model):
     movie_name = models.CharField(max_length=50)
     movie_genre = models.CharField(max_length=50)
@@ -10,7 +12,7 @@ class Movie(models.Model):
 
     def search_movie(self, word):
         return word in self.movie_name
-        
+
 
 class Actor(models.Model):
     actor_name = models.CharField(max_length=50)
@@ -18,5 +20,3 @@ class Actor(models.Model):
 
     def __str__(self):
         return self.actor_name
-    
-    
