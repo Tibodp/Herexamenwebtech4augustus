@@ -2,18 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <script type="text/javascript" src="/js/app.js"></script>
 
-    <title>Answer</title>
+    <title>Ask a question</title>
   </head>
 
   <body>
     <div class="card card-body bg-light">
-      <!-- the question mark after grade ensures that it doesn't crash when grade is null -->
-      <h1>hey</h1>
+      <h1>Ask a question</h1>
+      <br />
+
+      <form th:action="@{/search}" method="POST" onsubmit="return validate()">
+        <div class="form-group row">
+          <div class="col-xs-4">
+            <label for="movieName">Search : </label>
+            <input
+              type="text"
+              class="form-control"
+              name="movieName"
+              id="movieName"
+            />
+          </div>
+        </div>
+
+        <input type="SUBMIT" value="Search movie" />
+      </form>
     </div>
   </body>
 </html>

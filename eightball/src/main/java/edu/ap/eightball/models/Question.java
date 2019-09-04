@@ -20,7 +20,7 @@ public class Question {
     public Question() {
     }
 
-    public Question(String question) {sdsad
+    public Question(String question) {
         this.answer = answer;
 
     }
